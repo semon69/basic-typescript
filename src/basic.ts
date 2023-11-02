@@ -83,3 +83,29 @@ const student2: Student = {
 type Add = (num1: number, num2: number) => number
 
 const add2: Add = (num1, num2) => num1 + num2
+
+
+// Union Type
+
+type Developer = "Frontend Developer" | "Backend Developer"
+
+const newDev: Developer= "Backend Developer"
+
+//  Intersection type
+
+type FrontendDeveloper = {
+    skills: string[];
+    designation1: "Frontend Developer"
+}
+type BackendDeveloper = {
+    skills: string[];
+    designation2: "Backend Developer"
+}
+
+type FullstackDeveloper = FrontendDeveloper & BackendDeveloper
+
+const dev: FullstackDeveloper = {
+    skills: ["html", "css"],
+    designation1: "Frontend Developer",
+    designation2: "Backend Developer"
+}

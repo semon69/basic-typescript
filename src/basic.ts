@@ -43,7 +43,7 @@ const user = {
         return this.balance + balance
     }
 }
-console.log(user.addBalance(10));
+// console.log(user.addBalance(10));
 
 
 // Rest operators
@@ -52,7 +52,7 @@ const myfriends = (...friends:  String[]) => {
     )
 }
 
-myfriends('rahim', 'karim', 'mofiz', 'british')
+// myfriends('rahim', 'karim', 'mofiz', 'british')
 
 
 // Type alias
@@ -109,3 +109,24 @@ const dev: FullstackDeveloper = {
     designation1: "Frontend Developer",
     designation2: "Backend Developer"
 }
+
+// nullish coalescing operator
+const isAuthenticated = ''
+
+const res1 = isAuthenticated ?? "guest"
+const res2 = isAuthenticated ? isAuthenticated : "guest"
+// console.log({res1}, {res2});
+
+// Unknown type
+const getSeed = (value: unknown) => {
+    if(typeof value === "number"){
+        const covert = (value * 1000) / 3600
+        console.log(`The speed is ${covert} ms`);
+    }
+    if(typeof value === "string"){
+        const [getValue, unit] = value.split(" ")
+        const covert = (parseFloat(getValue) * 1000) / 3600
+        console.log(`The speed is ${covert} ms`);
+    }
+}
+getSeed('990 ms')

@@ -53,3 +53,33 @@ const myfriends = (...friends:  String[]) => {
 }
 
 myfriends('rahim', 'karim', 'mofiz', 'british')
+
+
+// Type alias
+type Student = {
+    name: string,
+    age: number,
+    gender: string,
+    address: string,
+    contactNo?: string
+}
+
+const student1: Student = { 
+    name: "hh",
+    age: 55,
+    gender: 'dfsd',
+    address: "dsd",
+    contactNo: "ffdf"
+}
+
+const student2: Student = {
+    name: "hh",
+    age: 55,
+    gender: 'dfsd',
+    address: "dsd",
+    contactNo: "ffdf"
+}
+
+type Add = (num1: number, num2: number) => number
+
+const add2: Add = (num1, num2) => num1 + num2
